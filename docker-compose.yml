@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+    brokenwire:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        network_mode: "host"
+        privileged: true
+        image: brokenwire:brokenwire
+        environment:
+            - DISPLAY=$DISPLAY
+        container_name: brokenwire
+        stdin_open: true
+        tty: true
+        volumes:
+            - "/dev:/dev"
+            - "/proc:/proc"
+            - "./code:/home/code"
+            - "./data:/home/data"
