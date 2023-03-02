@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/ssloxford/brokenwire/blob/master/data/brokenwire_logo.png" width="30%"></p>
+<p align="center"><img src="https://github.com/ssloxford/brokenwire/blob/main/data/brokenwire_logo.png" width="30%"></p>
 
 # Brokenwire: Wireless Disruption of CCS Electric Vehicle Charging
 
