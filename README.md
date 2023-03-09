@@ -32,6 +32,7 @@ This repository is organized as follows:
 │   ├── req                               # text file that contains all the Python requirements
 │   └── scripts                           # directory that contains additional evaluation scripts
 │       └── preamble_emission.py          # Python script that emits the preamble with a LimeSDR
+│       └── preamble_emission.py          # Python script that emits the preamble with a OsmoSDR devices such as (USRP, BladeRF, AntSDR E200 with UHD, etc.)
 ├── data                                  # directory that contains required files
 │   └── preambles                         # directory that contains the preamble
 │       └── captured_preamble.dat         # captured preamble used for the attack
@@ -61,6 +62,22 @@ and run the following command to start the attack:
 `python3 /home/code/scripts/preamble_emission.py  --lime-sdr-gain LIMESDR_GAIN`
 
 where LIMESDR_GAIN is a value between -12 and 64.
+
+Initially the source included the LimeSDR, but an alternative using OsmoSDR block can also be used:
+
+```
+python3 preamble_emission_osmosdr.py --help
+usage: preamble_emission_osmosdr.py [-h] [--devicestring DEVICESTRING] [--inputfile INPUTFILE] [--txgain TXGAIN] [--var-freq VAR_FREQ]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --devicestring DEVICESTRING
+                        Set deviceargs [default='']
+  --inputfile INPUTFILE
+                        Set preamblefile [default='captured_preamble.dat']
+  --txgain TXGAIN       Set txgain [default=10]
+  --var-freq VAR_FREQ   Set frequency [default=17000000]
+```
 
 ## Recommended Equipment
 
