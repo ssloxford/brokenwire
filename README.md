@@ -63,6 +63,9 @@ and run the following command to start the attack:
 
 where LIMESDR_GAIN is a value between -12 and 64.
 
+
+## Using other SDR devices
+
 Initially the source included the LimeSDR, but an alternative using OsmoSDR block can also be used:
 
 ```
@@ -78,6 +81,7 @@ optional arguments:
   --txgain TXGAIN       Set txgain [default=10]
   --var-freq VAR_FREQ   Set frequency [default=17000000]
 ```
+
 
 ## Recommended Equipment
 
