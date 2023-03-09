@@ -32,7 +32,7 @@ This repository is organized as follows:
 │   ├── req                               # text file that contains all the Python requirements
 │   └── scripts                           # directory that contains additional evaluation scripts
 │       └── preamble_emission.py          # Python script that emits the preamble with a LimeSDR
-│       └── preamble_emission.py          # Python script that emits the preamble with a OsmoSDR devices such as (USRP, BladeRF, AntSDR E200 with UHD, etc.). USRP X or N versions with a DC-30 MHz daughter board would fit well, maybe Red Pitaya SDRlab 122-16? Others will need a downconverter
+│       └── preamble_emission_osmosdr.py  # Python script that emits the preamble with a OsmoSDR devices such as (USRP, BladeRF, AntSDR E200 with UHD, etc.). USRP X or N versions with a DC-30 MHz daughter board would fit well, maybe Red Pitaya SDRlab 122-16? Others will need a downconverter
 ├── data                                  # directory that contains required files
 │   └── preambles                         # directory that contains the preamble
 │       └── captured_preamble.dat         # captured preamble used for the attack
