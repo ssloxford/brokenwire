@@ -32,7 +32,7 @@ This repository is organized as follows:
 │   ├── req                               # text file that contains all the Python requirements
 │   └── scripts                           # directory that contains additional evaluation scripts
 │       └── preamble_emission.py          # Python script that emits the preamble with a LimeSDR
-│       └── preamble_emission.py          # Python script that emits the preamble with a OsmoSDR devices such as (USRP, BladeRF, AntSDR E200 with UHD, etc.). USRP X or N versions with a DC-30 MHz daughter board would fit well, others will need a downconverter
+│       └── preamble_emission.py          # Python script that emits the preamble with a OsmoSDR devices such as (USRP, BladeRF, AntSDR E200 with UHD, etc.). USRP X or N versions with a DC-30 MHz daughter board would fit well, maybe Red Pitaya SDRlab 122-16? Others will need a downconverter
 ├── data                                  # directory that contains required files
 │   └── preambles                         # directory that contains the preamble
 │       └── captured_preamble.dat         # captured preamble used for the attack
@@ -66,7 +66,7 @@ where LIMESDR_GAIN is a value between -12 and 64.
 
 ## Using other SDR devices
 
-Initially the source was made for the LimeSDR mini*, but an alternative using OsmoSDR block can also be used for USRP X/N version with a DC-30 MHz daughter, or a downconverter for other devices that wouldn't tune to 17 MHz frequencies:
+Initially the source was made for the LimeSDR mini*, but an alternative using OsmoSDR block can also be used for USRP X/N version with a DC-30 MHz daughter, Red Pitaya SDRlab 122-16? , or a downconverter for other devices that wouldn't tune to 17 MHz frequencies:
 
 ```
 python3 preamble_emission_osmosdr.py --help
