@@ -66,7 +66,7 @@ where LIMESDR_GAIN is a value between -12 and 64.
 
 ## Using other SDR devices
 
-Initially the source was made for the LimeSDR mini*, but an alternative using OsmoSDR block can also be used for USRP X/N version with a DC-30 MHz daughter, Red Pitaya SDRlab 122-16? , or a downconverter for other devices that wouldn't tune to 17 MHz frequency:
+Initially the source was made for the LimeSDR mini*, but an alternative using OsmoSDR block can also be used for USRP X/N version with a DC-30 MHz daughter, Red Pitaya SDRlab 122-16? Or a downconverter for other devices that wouldn't tune to 17 MHz frequency:
 
 ```
 python3 preamble_emission_osmosdr.py --help
