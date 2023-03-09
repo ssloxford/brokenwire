@@ -32,6 +32,7 @@ This repository is organized as follows:
 │   ├── req                               # text file that contains all the Python requirements
 │   └── scripts                           # directory that contains additional evaluation scripts
 │       └── preamble_emission.py          # Python script that emits the preamble with a LimeSDR
+│       └── preamble_emission_osmosdr.py  # Python script that emits the preamble with a OsmoSDR devices such as (USRP, BladeRF, AntSDR E200 with UHD, etc.). USRP X or N versions with a DC-30 MHz daughter board would fit well, maybe Red Pitaya SDRlab 122-16? Others will need a downconverter
 ├── data                                  # directory that contains required files
 │   └── preambles                         # directory that contains the preamble
 │       └── captured_preamble.dat         # captured preamble used for the attack
@@ -61,6 +62,26 @@ and run the following command to start the attack:
 `python3 /home/code/scripts/preamble_emission.py  --lime-sdr-gain LIMESDR_GAIN`
 
 where LIMESDR_GAIN is a value between -12 and 64.
+
+
+## Using other SDR devices
+
+Initially the source was made for the LimeSDR mini*, but an alternative using OsmoSDR block can also be used for USRP X/N version (or v1) with a DC-30 MHz daughter, Red Pitaya SDRlab 122-16? Or a downconverter for other devices that wouldn't tune to 17 MHz frequency:
+
+```
+python3 preamble_emission_osmosdr.py --help
+usage: preamble_emission_osmosdr.py [-h] [--devicestring DEVICESTRING] [--inputfile INPUTFILE] [--txgain TXGAIN] [--var-freq VAR_FREQ]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --devicestring DEVICESTRING
+                        Set deviceargs [default='']
+  --inputfile INPUTFILE
+                        Set preamblefile [default='captured_preamble.dat']
+  --txgain TXGAIN       Set txgain [default=10]
+  --var-freq VAR_FREQ   Set frequency [default=17000000]
+```
+
 
 ## Recommended Equipment
 
